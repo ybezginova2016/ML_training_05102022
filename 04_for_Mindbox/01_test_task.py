@@ -74,13 +74,6 @@ print(a)
 # Функция, аналогичная первой, если ID начинается с произвольного числа.
 # На вход функция получает целые числа: n_customers (количество клиентов) и n_first_id (первый ID в последовательности).
 
-# def function_2(n_customers: int, n_first_id: int):
-#     grouped_list= []
-#     for customer_id in range(n_customers):
-#         group = sum(map(lambda x: int(x), list(str(customer_id))))
-#         grouped_list.append(group)
-#     return grouped_list
-
 def function_2(n_customers: int, n_first_id: int):
     grouped_list= []
     customer_id = n_first_id
