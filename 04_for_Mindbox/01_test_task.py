@@ -55,8 +55,12 @@ def count_cust_array(n_customers: int):
         grouped_list.append(group)
     return grouped_list
 
+# вызовем функцию
 a = count_cust_array(21355)
 print(a)
+
+# построим частотную гистограмму, чтобы наглядно видеть, сколько человек в каждой группе А/В-тестирования
+# UPD: совместно со второй функцией ниже две гистограммы не вызываются
 
 # import matplotlib.pyplot as plt
 # plt.figure(figsize=(9, 5))
@@ -89,6 +93,7 @@ def function_2(n_customers: int, n_first_id: int):
 # вызовем функцию
 b = function_2(188885, 55)
 
+# построим частотную гистограмму, чтобы наглядно видеть, сколько человек в каждой группе А/В-тестирования
 import matplotlib.pyplot as plt
 plt.figure(figsize=(9, 5))
 plt.xlabel('Номер группы для А/В-тестирования')
