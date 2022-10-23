@@ -115,8 +115,7 @@ distances = []
 for i in range(len(df_realty)):
     distances.append(distance.euclidean(preference_vector, df_realty.loc[i]))
 
-# argsort() возвращает индексы в порядке
-# увеличения значений в массиве
+# argsort() возвращает индексы в порядке увеличения значений в массиве
 best_index = np.array(distances).argsort()[1]
 
 print("Индекс наиболее похожей квартиры:", best_index)
