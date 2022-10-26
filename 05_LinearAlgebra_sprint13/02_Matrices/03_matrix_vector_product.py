@@ -24,9 +24,7 @@ import numpy as np
 import pandas as pd
 
 services = ['Минуты', 'СМС', 'Мбайты']
-
 packs_names = ['«За рулём»', '«В метро»']
-
 packs = np.array([
     [20, 5],
     [2, 5],
@@ -51,6 +49,7 @@ print()
 # интернет-трафика, которые потратил за месяц клиент №1.
 # Сохраните результат в переменной client_services и
 # напечатайте результат на экране
+
 import numpy as np
 import pandas as pd
 
