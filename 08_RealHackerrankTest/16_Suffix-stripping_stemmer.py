@@ -11,29 +11,40 @@
 # Example text = 'an extremely dangerous dog is barking'
 
 def stemmer(text):
+    # splitting one given string into several strings
+    # text_list = []
     text_list:list[str] = text.split(' ')
+    # creating a list for collecting new words without suffixes
     result_text = ''
     for value in text_list:
-        if 'ly' in value:
+        if value.endswith('ly'):
             res = value.removesuffix('ly')
-            if len(res) <= 8:
+            if len(res) > 8:
+                res = res[0:8]
                 result_text += res + ' '
-        elif 'ed' in value:
+            else:
+                result_text += res + ' '
+        elif value.endswith('ed'):
             res = value.removesuffix('ed')
-            if len(res) <= 8:
+            if len(res) > 8:
+                res = res[0:8]
                 result_text += res + ' '
-        elif 'ing' in value:
+            else:
+                result_text += res + ' '
+        elif value.endswith('ing'):
             res = value.removesuffix('ing')
-            if len(res) <= 8:
+            if len(res) > 8:
+                res = res[0:8]
+                result_text += res + ' '
+            else:
                 result_text += res + ' '
         else:
             if len(value) > 8:
-                diff= len(value) - 8
                 res = value[0:8]
-                result_text+= res + ' '
+                result_text += res + ' '
             else:
                 result_text += value + ' '
-
+    # strip - a function, which deletes spaces at the beginning and the end of the sentence
     return result_text.strip()
 
 print(stemmer('an extremely dangerous dog is barking'))
